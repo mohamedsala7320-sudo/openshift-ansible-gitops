@@ -46,18 +46,26 @@ openshift-ansible-gitops/
 ---
 
 ## 🧪 Local Testing & Verification
+
 To verify the microservices locally using Docker:
 
-1. Run the Backend (Flask API):
-
+1. **Run the Backend (Flask API):**
+   ```bash
    docker run -d -p 5000:5000 mosala7320/backend:latest
+   ```
+
+Test the backend endpoint
+   ```bash
    curl http://localhost:5000
+   ```
 
-2. Run the Frontend (Nginx):
-
+2. **Run the Frontend (Nginx):**
+   ```bash
    docker run -d -p 8080:80 mosala7320/frontend:latest
+   ```
  
-   "Open your browser at http://localhost:8080 to view the application interface."
+   "Open your browser at http://localhost:8080 
+    👉 to view the application interface."
 
 ---
 
