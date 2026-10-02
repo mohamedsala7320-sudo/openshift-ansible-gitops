@@ -54,7 +54,7 @@ To verify the microservices locally using Docker:
    docker run -d -p 5000:5000 mosala7320/backend:latest
    ```
 
-Test the backend endpoint
+   Test the backend endpoint
    ```bash
    curl http://localhost:5000
    ```
@@ -71,10 +71,11 @@ Test the backend endpoint
 
 ## ⚙️  Deployment on OpenShift via Ansible
 
-     To orchestrate and deploy the microservices cluster using the automated Ansible playbook:
-
+To orchestrate and deploy the microservices cluster using the automated Ansible playbook:
+    
+     ```bash
      ansible-playbook ansible/playbooks/deploy.yaml
-
+     ```
 ---
 
 👨‍💻 Author
