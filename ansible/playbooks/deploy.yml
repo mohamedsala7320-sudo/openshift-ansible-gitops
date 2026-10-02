@@ -1,0 +1,32 @@
+---
+- name: Deploy Microservices to OpenShift
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: Ensure The Namespace exists
+      kubernetes.core.k8s:
+        state: present
+        src: "../../k8s-manifests/namespace.yaml"
+
+    - name: Deploy Backend Application and Service
+      kubernetes.core.k8s:
+        state: present
+        src: "../../k8s-manifests/backend-deployment.yaml"
+
+    - name: Deploy Frontend Application, Service, and OpenShift Route
+      kubernetes.core.k8s:
+        state: present
+        src: "../../k8s-manifests/frontend-deployment.yaml"
+
+    - name: Verify deployed resources in OpenShift
+      kubernetes.core.k8s_info:
+        api_version: v1
+        kind: Pod
+        namespace: my-app-prod
+      register: pod_list
+
+    - name: Show running pods
+      ansible.builtin.debug:
+        msg: "Found {{ pod_list.resources | length }} running pods in my-app-prod namespace."
