@@ -40,6 +40,8 @@ openshift-ansible-gitops/
 │   └── frontend/           # Nginx frontend source & Dockerfile
 └── README.md
 
+```
+
 
 ---
 
