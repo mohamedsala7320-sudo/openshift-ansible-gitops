@@ -75,17 +75,10 @@ To verify the microservices locally using Docker:
  
      ```bash
      ansible-playbook ansible/playbooks/deploy.yaml
-     ```
+     
 ---
 
 👨‍💻 Author
 
 Mohamed Salah — DevOps & Cloud Engineer
-
-
-
-
-
-
-
 
