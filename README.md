@@ -71,8 +71,7 @@ To verify the microservices locally using Docker:
 
 ## ⚙️  Deployment on OpenShift via Ansible
 
-To orchestrate and deploy the microservices cluster using the automated Ansible playbook:
-    
+   To orchestrate and deploy the microservices cluster using the automated Ansible playbook: 
      ```bash
      ansible-playbook ansible/playbooks/deploy.yaml
      ```
